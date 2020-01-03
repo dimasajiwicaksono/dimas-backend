@@ -47,12 +47,12 @@ exports.show = (req, res) => {
 
 
 
-exports.events = (req, res) => {
-    Events.findAll(
+exports.orderByUser = (req, res) => {
+    Orders.findAll(
         {
             where: { user_id: req.params.id },
             include: [
-                { model: Categories, as: 'category', attributes: ['id', 'name'] }
+                { model: Users, as: 'user_id', attributes: ['id', 'name'] }
             ]
         }
     ).then(article => res.send(article))

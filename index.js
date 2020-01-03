@@ -44,7 +44,7 @@ app.group("/api/v1", (router) => {
     router.post('/order', orderController.store);
     router.get('/orders', orderController.index);
     router.get('/order/:id',orderController.show);
-    router.get ('/user/:id/orders', orderController.orderByUser)
+    router.get('/user/:id/orders',orderController.orderByUser)
 
     //User
     router.post('/user', userController.store);
