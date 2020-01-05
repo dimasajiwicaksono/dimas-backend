@@ -6,7 +6,7 @@ const Users = models.users
 
 // get all data
 exports.index = (req, res) => {
-    Events.findAll( ).then(events => res.send(events))
+    Users.findAll( ).then(events => res.send(events))
 }
 
 

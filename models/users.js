@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     users.hasMany(models.events ,
       {as:'createdBy', foreignKey:'author_id'},
     users.hasMany(models.orders, 
-      {as:'event', foreignKey:'id'}
+      {as:'order', foreignKey:'id'}
     ))
   };
   return users;

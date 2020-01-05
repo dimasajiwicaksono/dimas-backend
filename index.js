@@ -43,6 +43,7 @@ app.group("/api/v1", (router) => {
     //Order
     router.post('/order', orderController.store);
     router.get('/orders', orderController.index);
+    router.patch('/order/:id', orderController.update); 
     router.get('/order/:id',orderController.show);
     router.get('/user/:id/orders',orderController.orderByUser)
 
@@ -51,7 +52,7 @@ app.group("/api/v1", (router) => {
     router.get('/user/:id', userController.show);
     router.patch('/user/:id', userController.update);    
     router.delete('/user/:id', userController.delete);
-    router.get('/user', userController.index); 
+    router.get('/users', userController.index); 
 
 // (path, middleware, action_in_controller)
     router.post('/login', authController.login);

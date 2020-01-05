@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
       {as :'createdBy', foreignKey:'author_id'},
     events.belongsTo(models.categories,
       {as :'category', foreignKey:'category_id'},
-      events.hasMany(models.orders,
+    events.hasMany(models.orders,
         {as :'event', foreignKey:'event_id'}
       )))
     };

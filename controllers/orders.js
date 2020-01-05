@@ -52,9 +52,24 @@ exports.orderByUser = (req, res) => {
         {
             where: { user_id: req.params.id },
             include: [
-                { model: Users, as: 'user_id', attributes: ['id', 'name'] }
+                { model: Users, as: 'createdBy', attributes: ['id', 'name'] },
+                { model: Events, as: 'event', attributes: ['id', 'title', 'category_id', 'price', 'description', 'address', 'urlMaps', 'img', 'author_id'] },
             ]
         }
     ).then(article => res.send(article))
         .catch(err => res.send(err))
+}
+
+
+
+exports.update = (req, res) => {
+    Orders.update(
+        req.body,
+        { where: { id: req.params.id } }
+    ).then(order => {
+        res.send({
+            message: "success",
+            order
+        })
+    })
 }
