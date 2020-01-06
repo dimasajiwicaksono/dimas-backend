@@ -43,7 +43,7 @@ app.group("/api/v1", (router) => {
     //Order
     router.post('/order', orderController.store);
     router.get('/orders', orderController.index);
-    router.patch('/order/:id', orderController.update); 
+    router.put('/order/:id', orderController.update); 
     router.get('/order/:id',orderController.show);
     router.get('/user/:id/orders',orderController.orderByUser)
     router.get('/user/:id/orders/pending',orderController.pending)
@@ -52,7 +52,7 @@ app.group("/api/v1", (router) => {
     //User
     router.post('/user', userController.store);
     router.get('/user/:id', userController.show);
-    router.patch('/user/:id', userController.update);    
+    router.put('/user/:id', userController.update);    
     router.delete('/user/:id', userController.delete);
     router.get('/users', userController.index); 
 
