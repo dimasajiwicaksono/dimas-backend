@@ -9,8 +9,6 @@ exports.index = (req, res) => {
     Users.findAll( ).then(events => res.send(events))
 }
 
-
-
 exports.store = (req, res) => {
     Users.create(req.body).then(users => {
         res.send({

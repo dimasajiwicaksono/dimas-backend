@@ -46,6 +46,8 @@ app.group("/api/v1", (router) => {
     router.patch('/order/:id', orderController.update); 
     router.get('/order/:id',orderController.show);
     router.get('/user/:id/orders',orderController.orderByUser)
+    router.get('/user/:id/orders/pending',orderController.pending)
+    router.get('/user/:id/orders/approved',orderController.approved)
 
     //User
     router.post('/user', userController.store);
@@ -54,7 +56,7 @@ app.group("/api/v1", (router) => {
     router.delete('/user/:id', userController.delete);
     router.get('/users', userController.index); 
 
-// (path, middleware, action_in_controller)
+    // (path, middleware, action_in_controller)
     router.post('/login', authController.login);
     router.get('/login', authController.login);
 

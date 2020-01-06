@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     // associations can be defined here
 
     users.hasMany(models.events ,
-      {as:'createdBy', foreignKey:'author_id'},
+      {as:'event', foreignKey:'author_id'},
     users.hasMany(models.orders, 
       {as:'order', foreignKey:'id'}
     ))
