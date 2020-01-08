@@ -10,13 +10,13 @@ module.exports = {
       },
       event_id: {
         type: Sequelize.INTEGER,
-        allowNull: false,
-        references: {
-            model: 'events',
-            key: 'id'
-        },
-        onUpdate: 'cascade',
-        onDelete: 'cascade'
+        // allowNull: false,
+        // references: {
+        //     model: 'events',
+        //     key: 'id'
+        // },
+        // onUpdate: 'cascade',
+        // onDelete: 'cascade'
       },
       quantity: {
         type: Sequelize.INTEGER
@@ -30,8 +30,15 @@ module.exports = {
       attachment: {
         type: Sequelize.STRING
       },
-      user_id : {
-        type : Sequelize.INTEGER
+      user_id: {
+        type: Sequelize.INTEGER, 
+        // allowNull: false,
+        // references: {
+        //   model:'users',
+        //   key:'id',
+        // },
+        // onUpdate:'cascade',
+        // onDelete:'cascade'
       },
       createdAt: {
         allowNull: false,

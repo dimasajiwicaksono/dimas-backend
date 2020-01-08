@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     // associations can be defined here
 
     categories.hasMany(models.events, 
-      {as:'category',foreignKey:'category_id'}
+      {foreignKey:'category_id'}
       )
   };
   return categories;

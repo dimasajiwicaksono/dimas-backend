@@ -14,12 +14,12 @@ module.exports = {
       category_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        references: {
-            model: 'categories',
-            key: 'id'
-        },
-        onUpdate: 'cascade',
-        onDelete: 'cascade'
+        // references: {
+        //     model: 'categories',
+        //     key: 'id'
+        // },
+        // onUpdate: 'cascade',
+        // onDelete: 'cascade',
       },
       start_time: {
         allowNull: false,
@@ -44,8 +44,15 @@ module.exports = {
       img: {
         type: Sequelize.STRING
       },
-      author_id: {
-        type: Sequelize.INTEGER,
+      user_id: {
+      type: Sequelize.INTEGER,
+      allowNull: false,
+      // references: {
+      //     model: 'users',
+      //     key: 'id',
+      //   },
+      // onUpdate: 'cascade',
+      // onDelete: 'cascade',
 
       },
       createdAt: {

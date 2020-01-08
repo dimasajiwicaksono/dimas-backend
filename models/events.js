@@ -10,16 +10,18 @@ module.exports = (sequelize, DataTypes) => {
     address: DataTypes.STRING,
     urlMaps: DataTypes.STRING,
     img: DataTypes.STRING,
-    author_id: DataTypes.INTEGER
+    user_id: DataTypes.INTEGER,
   }, {});
   events.associate = function(models) {
     // associations can be defined 
     events.belongsTo(models.users, 
-      {as :'createdBy', foreignKey:'author_id'},
+      {as :'createdBy', foreignKey:'user_id'},
     events.belongsTo(models.categories,
       {as :'category', foreignKey:'category_id'},
     events.hasMany(models.orders,
-        {as :'event', foreignKey:'event_id'}
+        {as :'event', foreignKey:'event_id'},
+    events.hasMany(models.likes, 
+          { foreignKey: 'event_id'})
       )))
     };
   return events;

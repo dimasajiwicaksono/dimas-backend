@@ -10,6 +10,7 @@ module.exports = {
         quantity: 2,
         totalPrice: 230000,
         status: "pending",
+        user_id: 1
       },
 
       {
@@ -18,6 +19,7 @@ module.exports = {
         quantity: 3,
         totalPrice: 450000,
         status: "pending",
+        user_id: 1
 
       },
       {
@@ -26,6 +28,7 @@ module.exports = {
         quantity: 1,
         totalPrice: 150000,
         status: "pending",
+        user_id: 1
 
       },
     ], {});

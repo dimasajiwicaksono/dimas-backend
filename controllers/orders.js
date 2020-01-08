@@ -23,7 +23,8 @@ exports.store = (req, res) => {
 exports.index = (req, res) => {
     Orders.findAll({
         include: [
-            { model: Events, as: 'event', attributes: ['id', 'title', 'category_id', 'price', 'description', 'address', 'urlMaps', 'img', 'author_id'] },
+            { model: Events, as: 'event', attributes: ['id', 'title', 'category_id', 'price', 'description', 
+            'address', 'urlMaps', 'img', 'user_id'] },
         ], attributes: ['id', 'event_id', 'quantity', 'totalPrice', 'status']
     }).then(events => res.send(events))
 }
@@ -41,7 +42,8 @@ exports.show = (req, res) => {
                 ],
 
                 as: 'event',
-                attributes: ['id', 'title', 'category_id', 'price', 'description', 'address', 'urlMaps', 'img', 'author_id']
+                attributes: ['id', 'title', 'category_id', 'price', 'description',
+                                'address', 'urlMaps', 'img', 'user_id']
             }
         ]
     }).then(events => res.send(events))
@@ -55,7 +57,8 @@ exports.orderByUser = (req, res) => {
             where: { user_id: req.params.id },
             include: [
                 { model: Users, as: 'createdBy', attributes: ['id', 'name'] },
-                { model: Events, as: 'event', attributes: ['id', 'title', 'category_id', 'price', 'description', 'address', 'urlMaps', 'img', 'author_id'] },
+                { model: Events, as: 'event', attributes: ['id', 'title', 'category_id', 'price', 
+                'description', 'address', 'urlMaps', 'img', 'user_id'] },
             ]
         }
     ).then(article => res.send(article))
@@ -91,7 +94,8 @@ exports.pending = (req, res) => {
                     as: 'createdBy',
                     attributes: ['id', 'name']
                 },
-                { model: Events, as: 'event', attributes: ['id', 'title', 'category_id', 'price', 'description', 'address', 'urlMaps', 'img', 'author_id'] },
+                { model: Events, as: 'event', attributes: ['id', 'title', 'category_id', 'price', 
+                'description', 'address', 'urlMaps', 'img', 'user_id'] },
             ]
         }
     ).then(data => {
@@ -118,7 +122,8 @@ exports.approved = (req, res) => {
                     as: 'createdBy',
                     attributes: ['id', 'name']
                 },
-                { model: Events, as: 'event', attributes: ['id', 'title', 'category_id', 'price', 'description', 'address', 'urlMaps', 'img', 'author_id'] },
+                { model: Events, as: 'event', attributes: ['id', 'title', 'category_id', 'price', 
+                'description', 'address', 'urlMaps', 'img', 'user_id'] },
             ]
         }
     ).then(data => {

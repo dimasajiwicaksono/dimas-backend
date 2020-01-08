@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
       {as: 'event', foreignKey:'event_id'},
   
     orders.belongsTo (models.users, 
-      {as: 'createdBy', foreignKey:'id'},
+      {as: 'createdBy', foreignKey:'user_id'},
     ))
     }
   return orders;

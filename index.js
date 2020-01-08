@@ -17,6 +17,8 @@ const userController = require('./controllers/users');
 const categoryController = require('./controllers/categories');
 const orderController = require('./controllers/orders')
 const authController = require('./controllers/auth')
+const likeController = require('./controllers/likes')
+
 
 // // middleware
 const {authenticated} = require ('./middleware');
@@ -33,8 +35,11 @@ app.group("/api/v1", (router) => {
     router.get('/event/:id', eventController.show)
     router.post('/event', eventController.store); 
     router.get('/category/:id/events', eventController.eventCategory)
+    router.get('/events/:start_time', eventController.indexDate)
+    router.put('/event/:id', eventController.update)
+    router.get('/events/:title/search', eventController.indexSearch)
     
-    
+
     // category
     router.get('/categories', categoryController.index);
     router.get('/category/:id', categoryController.show);
@@ -61,6 +66,15 @@ app.group("/api/v1", (router) => {
     router.get('/login', authController.login);
 
     router.post('/register', authController.register)
+
+
+    // likes 
+    router.get('/likes_all', likeController.index)
+    router.post('/like', likeController.liked) // show like form event and user event like
+    router.post('/likes', likeController.create) //likes events
+    router.delete('/likes/:id', likeController.destroy) // delete field
+    router.get('/users/:id/likes', likeController.show) //show events that user liked
+
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}!`));

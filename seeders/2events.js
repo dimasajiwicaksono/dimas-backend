@@ -15,7 +15,7 @@ module.exports = {
         address: "Jl. Pintu Satu Senayan, Gelora, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270",
         urlMaps: "https://2ab9pu2w8o9xpg6w26xnz04d-wpengine.netdna-ssl.com/wp-content/uploads/staticmaps/s/674064-stadium-utama-gelora-bung-karno/stadium-utama-gelora-bung-karno-map-large.png",
         img: "https://s3-ap-southeast-1.amazonaws.com/loket-production-sg/images/banner/20191202125057.JPG",
-        author_id: 1,
+        user_id: 1,
       },
       {
         id: 2,
@@ -28,7 +28,7 @@ module.exports = {
         address: "Gambir, Kecamatan Gambir, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta",
         urlMaps: "https://live.staticflickr.com/3422/3910965429_7155b54885_z.jpg",
         img: "https://visitingjogja.com/wp-content/uploads/2017/09/Wayang-kulit-kadipaten-Pakualaman.jpg",
-        author_id: 2,
+        user_id: 2,
       },
       {
         id: 3,
@@ -41,7 +41,7 @@ module.exports = {
         address: "Jl. Pintu Satu Senayan, Gelora, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270",
         urlMaps: "https://2ab9pu2w8o9xpg6w26xnz04d-wpengine.netdna-ssl.com/wp-content/uploads/staticmaps/s/674064-stadium-utama-gelora-bung-karno/stadium-utama-gelora-bung-karno-map-large.png",
         img: "https://i.ytimg.com/vi/1O_-QGctaoQ/maxresdefault.jpg",
-        author_id: 3,
+        user_id: 3,
       },
       {
         id: 4,
@@ -54,7 +54,7 @@ module.exports = {
         address: "Jl. Pintu Satu Senayan, Gelora, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270",
         urlMaps: "https://2ab9pu2w8o9xpg6w26xnz04d-wpengine.netdna-ssl.com/wp-content/uploads/staticmaps/s/674064-stadium-utama-gelora-bung-karno/stadium-utama-gelora-bung-karno-map-large.png",
         img: "https://i.ytimg.com/vi/WKOIwu8R0bU/maxresdefault.jpg",
-        author_id: 2,
+        user_id: 2,
       },
     ], {});
   },
